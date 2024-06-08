@@ -1,4 +1,4 @@
-# Ascii-Web
+# website ASCII
 Projeto de desenvolvimento do site da Ascii
 
 ### Para os Devs
@@ -11,9 +11,3 @@ Abra seu terminal e use:
 ### `Git Clone *chave ssh do projeto*`
 
 Assim que clonar o projeto você deve dar um yarn para baixar as dependencias necessarias (dentro da pasta frontend)
-
-## Available Scripts
-
-Para executar o projeto use (dentro da pasta frontend):
-
-### `yarn dev`
