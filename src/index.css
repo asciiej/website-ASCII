@@ -5,14 +5,17 @@
   --green: #83E356;
   --blue-light: #297FDB;
   --blue-dark: #061380;
+
+  /* Neutrals */
   --black: #1b1b1b;
+  --silver: #abb7c4;
 
   /* Typhography */
   --font-main: 'Montserrat', sans-serif;
 }
 
 body {
-    padding: 0 5em;
+    margin: 0;
     font-family: var(--font-main);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
