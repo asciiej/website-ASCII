@@ -1,0 +1,8 @@
+.service-card {
+    padding: 1em;
+    border: 1px lightgray solid;
+    border-radius: 5px;
+    margin: 1.3em;
+    transition: all 2s;
+}
+

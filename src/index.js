@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import App from './App';
-import MVV from "./pages/mvv/index.js"
+import Servicos from './components/Servicos/index.js';
+import ServicoCards from './components/Servicos/ServicoCards.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <>
-    <MVV />
-  </>
+  <section className='services'>
+    <h2>Nossos Serviços</h2>
+    <ServicoCards />
+  </section>
 );
