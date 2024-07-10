@@ -1,8 +1,120 @@
-.service-card {
-    padding: 1em;
-    border: 1px lightgray solid;
-    border-radius: 5px;
-    margin: 1.3em;
-    transition: all 2s;
+.services {
+    font-family: var(--font-main);
+    background: linear-gradient(144deg, rgba(6,19,128,1) 0%, rgba(4,10,61,1) 97%);
+    transition: all 1s;
 }
+
+.services-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%; 
+    background-attachment: fixed;
+   
+    /* cover for mobile */
+}
+
+.services-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    padding: 10% 15%;
+}
+
+.service-card {
+    box-sizing: border-box;
+    color: white;
+    border-radius: 5px;
+    width: 25vw;
+    height: 100%;
+    opacity: 1;
+    margin: 2em 4em;
+
+    h3 {
+        font-weight: 600;
+        font-size: 30;
+    }
+
+    p {
+        color: white;
+        font-weight: 400;
+        margin: 1em 0;
+        line-height: 150%;
+    }
+
+    label {
+        display: flex;
+        bottom: 1em;
+        align-items: center;
+        justify-content: left;
+        width: 50%;
+        gap: 1em;
+        color: var(--green);
+        font-weight: 700;
+        transition: color 0.2s;
+        background: none;
+        border: none;
+        margin-top: 1em 0;
+    }
+
+    label:hover {
+        cursor: pointer;
+        color: green;
+    }
+
+    input {
+        display: none;
+    }
+}
+
+.service-details {
+    transform: translateY(0);  
+    opacity: 0;
+
+    img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    p {
+        color: var(--silver);
+    }
+}
+
+.chevronIcon {
+    transition: all 0.5s;
+}
+
+.service-active {
+    .chevronIcon {
+        transform: rotate(90deg);
+    }
+
+    .service-details {
+        transform: translateY(5%);
+        animation: show 600ms 100ms forwards;
+    }
+}
+
+.service-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+    margin-bottom: 0.5em;
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@keyframes show {
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
 
