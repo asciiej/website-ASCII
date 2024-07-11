@@ -46,33 +46,39 @@ const services = [{
 
 export default function ServicesList() {
     const [active, setActive] = useState(false);
+    
     return (
         <div className='services-list'>
             {services.map((service, idx) => {
+                const isActive = active === idx;
+                const selected = isActive ? 'service-card service-active' : 'service-card';
+                const visible = active != null && active != idx ? 'service-hidden' : '';
+                
                 return (
                     <div 
-                    className={active === idx ? 'service-card service-active' : 'service-card'}
+                    className={`${selected} ${visible}`}
                     key={service.id}>
                         <div className='service-header'>
-                            <img src={service.icon} alt=""></img>
+                            <img className='service-icon' src={service.icon} alt=""></img>
                             <h3>{service.title}</h3>
                         </div>
                         <p>{service.description}</p>
-                        <label>
+                        <label className='service-button'>
                             <input
                             type="checkbox" 
                             onClick={() => {
-                                if (active === idx){
-                                    setActive() 
+                                if (isActive){
+                                    setActive(null);
                                 } else {
                                     setActive(idx)
                                 }
                             }}>
                             </input>
-                                Saiba Mais
+                                {isActive ? 'Voltar' : 'Saiba Mais'}
                                 <img src={chevronRight} className='chevronIcon'></img> 
                         </label>
-                        {active === idx && <div className='service-details'>
+                        
+                        {isActive && <div className='service-details'>
                             <p>{service.details} </p>
                             <img src={service.image}  alt="Desenvolvimento de aplicativos"></img>
                         </div>}

@@ -3,15 +3,21 @@
 :root {
   /* Colors */
   --green: #83E356;
+  --green-hover: #a8f086;
   --blue-light: #297FDB;
   --blue-dark: #061380;
 
   /* Neutrals */
   --black: #1b1b1b;
-  --silver: #abb7c4;
+  --silver: #dae8f8;
 
   /* Typhography */
   --font-main: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
