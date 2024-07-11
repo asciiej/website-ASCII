@@ -89,7 +89,7 @@ const services = [{
     }];
 
 export default function ServicesList() {
-    const [active, setActive] = useState(false);
+    const [active, setActive] = useState(null);
     
     return (
         <div className='services-list'>

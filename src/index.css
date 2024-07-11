@@ -27,3 +27,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 42px;
+  padding-top: 2em;
+}
+
