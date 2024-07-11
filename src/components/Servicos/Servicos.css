@@ -33,10 +33,10 @@
     box-sizing: border-box;
     color: white;
     border-radius: 5px;
-    width: 25vw;
+    width: 40%;
     height: 100%;
     opacity: 1;
-    margin: 2em 4em;
+    margin: 2em 3vw;
     transition: scale ease-in;
 
     h3 {
@@ -136,14 +136,6 @@ hide {
         animation: show 600ms 100ms forwards;
     }
 
-    h3 {
-        font-size: 25px;
-    }
-
-    .service-icon {
-        width: 50px;
-        height: 50px;
-    }
     li {
         margin: 1em 0;
         box-sizing: border-box;
@@ -160,4 +152,28 @@ hide {
       transform: none;
     }
   }
+
+@media screen and (max-width: 900px) {
+    h2 {
+        font-size: 30px;
+    }
+
+    .service-card {
+        width: 100%;
+        margin: 2em 0;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .service-active {
+        h3 {
+            font-size: 25px;
+        }
+    
+        .service-icon {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
 
