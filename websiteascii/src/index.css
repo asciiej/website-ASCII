@@ -1,0 +1,28 @@
+:root {
+  /* Colors */
+  --green: #83E356;
+  --green-hover: #a8f086;
+  --blue-light: #297FDB;
+  --blue-dark: #061380;
+
+  /* Neutrals */
+  --black: #1b1b1b;
+  --silver: #bccbdb;
+
+  /* Typhography */
+  --font-main: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,50 @@
+.presentation{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    left: 12%;
+    margin-top: 15em;
+    margin-left: 100px;
+}
+
+.presentation1{
+    display: flex;
+    width: 100%;
+    
+}
+
+.imgcomputer{
+    height: 80%;
+
+}
+
+.computer{
+    height: 600px;
+    width: 50%;
+    right: 1%;
+    position: absolute;
+    margin-top: 10em;
+}
+
+.presentation h2{
+    color: #061380;
+    width: 400px; ;
+    position: absolute;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500px;
+    font-size: 50px;
+    font-style: normal;
+    line-height: 50px;
+}
+
+.presentation p{
+    position: absolute;
+    display: block;
+    width: 350px;
+    margin-top: 200px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 25px;
+    font-size: 18px;
+}
