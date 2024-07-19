@@ -96,7 +96,7 @@ export default function ServicesList() {
             {services.map((service, idx) => {
                 const isActive = active === idx;
                 const selected = isActive ? 'service-card service-active' : 'service-card';
-                const visible = active != null && active != idx ? 'service-hidden' : '';
+                const visible = active !== null && active !== idx ? 'service-hidden' : '';
                 
                 return (
                     <div 
