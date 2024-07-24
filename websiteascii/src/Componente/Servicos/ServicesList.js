@@ -9,6 +9,8 @@ import webImg from '../../image/web.png'
 import consultoriaImg from '../../image/consultoria.png'
 import sistemasImg from '../../image/sistemas.png'
 
+import Servicos from './Servicos'; 
+
 const services = [{
         id: 'apps',
         icon: appsIcon,
@@ -94,7 +96,7 @@ export default function ServicesList() {
             {services.map((service, idx) => {
                 const isActive = active === idx;
                 const selected = isActive ? 'service-card service-active' : 'service-card';
-                const visible = active != null && active !== idx ? 'service-hidden' : '';
+                const visible = active !== null && active !== idx ? 'service-hidden' : '';
                 
                 return (
                     <div 
@@ -117,7 +119,7 @@ export default function ServicesList() {
                             }}>
                             </input>
                                 {isActive ? 'Voltar' : 'Saiba Mais'}
-                                <img src={chevronRight} className='chevronIcon' alt=''></img> 
+                                <img src={chevronRight} className='chevronIcon'></img> 
                         </label>
                         
                         {isActive && <div className='service-details'>

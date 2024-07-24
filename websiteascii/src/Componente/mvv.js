@@ -1,25 +1,25 @@
 import React from 'react';
-import './mvv.css';
+import style from  './mvv.module.css';
 
 function Mvv(){
     return (
-        <div className='corpo'>
-            <div className='texto'>
+        <div className={style.corpo}>
+            <div className={style.texto}>
                 <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate tempore, atque magnam nemo facilis perspiciatis eligendi eum illo saepe modi ex! 
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate tempore, atque magnam nemo facilis perspiciatis eligendi eum illo saepe modi ex! (Aqui algum texto que introduza nossos valores)</h2>
             </div>
-            <div className='cards'>
-                <div className='card'>
+            <div className={style.cards}>
+                <div className={style.card}>
                     <img alt=''></img>
                     <h3>Missão</h3>
                     <p>Capacitar e transformar talentos através da inovação tecnológica, oferecendo soluções criativas e eficazes para nossos clientes, enquanto promovemos o crescimento pessoal e profissional de nossos membros.</p>
                 </div>
-                <div className='card'>
+                <div className={style.card}>
                     <img alt=''></img>
                     <h3>Visão</h3>
                     <p>Ser referência em excelência e inovação na área da tecnologia, formando líderes e especialistas comprometidos com o desenvolvimento sustentável e a transformação digital.</p>
                 </div>
-                <div className='card'>
+                <div className={style.card}>
                     <img alt=''></img>
                     <h3>Valor</h3>
                     <p>Inovação:
@@ -30,7 +30,7 @@ function Mvv(){
                         Investimos no crescimento contínuo de nossos membros, promovendo aprendizado e desenvolvimento pessoal e profissional.</p>
                 </div>
             </div>
-            <div className='botao'>
+            <div className={style.botao}>
                 <button to='' >Conheça mais sobre Nós</button>
             </div>
         </div>        

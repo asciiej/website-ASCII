@@ -1,9 +1,10 @@
 import computer from '../image/computer.png'
+import style from './Presentation.module.css';
 
 function Computer(){
 
     return(
-        <img className='imgcomputer' src={computer} alt="computer"/>
+        <img className={style.imgcomputer} src={computer} alt="computer"/>
     )
 }
 

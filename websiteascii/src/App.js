@@ -5,17 +5,21 @@ import Servicos from './Componente/Servicos/Servicos.js'
 import Footer from './Componente/footer.js';
 import Mvv from './Componente/mvv.js';
 import Presentation from './Componente/Presentation.js';
-
-// TESTES 
+import AgendarReuniao from './Componente/AgendarReuniao/AgendarReuniao.js'
+import PagContato from './Componente/PagContato/Pagcontato.js';
 
 function App() {
   return (
     <Router>
-      <Header/>
+      <Header/> 
       <Presentation/>
       <Servicos/>
       <Mvv/>
+      <AgendarReuniao/>
       <Footer/>
+      {/*
+      <PagContato/>
+      */}
     </Router>
   );
 }

@@ -1,0 +1,15 @@
+.Body{
+display: block;
+width: 100%;
+}
+
+.formulario {
+    display: flex;
+    position: relative;
+    width: 500px;
+    height: 800px;
+    margin-top: 200px;
+    background-color: aquamarine;
+}
+
+

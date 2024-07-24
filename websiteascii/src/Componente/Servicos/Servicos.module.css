@@ -16,11 +16,11 @@
     background-repeat: no-repeat;
     background-size: 65%; 
     background-attachment: fixed;
-    padding: 5% 0;
+
     /* cover for mobile */
 }
 
-.services-list {
+.serviceslist {
     display: flex;
     justify-content: center;
     flex-direction: row;
