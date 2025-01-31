@@ -22,7 +22,8 @@
         background-color: var(--silver);
         border: none;
         border-radius: 8px;
-        margin: 8px 0 0 60%;
+        margin: 8px 0 0 55%;
+        height: auto;
         transition: all 0.08s;
     }
 
@@ -50,6 +51,7 @@
     }
 
     p {
+        text-align: start;
         font-size: 16px;
         margin: 0px;
     }
@@ -57,6 +59,24 @@
 
 button .off {
     display: none;
+}
+
+@media screen and (max-width: 1360px) {
+    .project_text p{
+        font-size: 14px;
+    }
+    .project_card button{
+        margin: 8px 0 0 45%;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .project_text p{
+        font-size: 12px;
+    }
+    .project_card button{
+        margin: 8px 0 0 35%;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -67,5 +87,9 @@ button .off {
             margin: 8px auto;
             padding: 8px 20px;
         }
+    }
+
+    .project_text p{
+        font-size: 16px;
     }
 }

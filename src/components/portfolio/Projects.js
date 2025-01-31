@@ -46,7 +46,7 @@ export default function Projects() {
                     alt='GeoPhotos'
                     category='Desenvolvimento de Software'
                     title='Geo Photos'
-                    description='Aplicativo desktop para adição automática de coordenadas geográficas em fotos.'
+                    description='Aplicativo desktop para adição automática de coordenadas em fotos.'
                     link='/portfolio/geo-photos/#case-anchor'
                 />
                 <ProjectCard 
