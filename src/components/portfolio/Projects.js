@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom';
 import jus from 'image/Jus.png'
 import uberground from 'image/uberground.png'
 import geophotos from 'image/geo1.png';
+import constru from 'image/constru1.png';
 
 export default function Projects() {
     return (
@@ -36,7 +37,7 @@ export default function Projects() {
                     alt='Jus Consultoria'
                     category='Desenvolvimento de Software'
                     title='Jus Consultoria'
-                    description='Aplicativo desktop para preenchimento otimizado de contratos. Conta com sistema de cadastro com login e senha.'
+                    description='Aplicativo desktop para preenchimento otimizado de contratos.'
                     link='/portfolio/jus-consultoria/#case-anchor'
                 />
 
@@ -45,9 +46,19 @@ export default function Projects() {
                     alt='GeoPhotos'
                     category='Desenvolvimento de Software'
                     title='Geo Photos'
-                    description='Aplicativo desktop para adição automática de coordenadas geográficas em fotos. Possui processamento de imagens e extração de metadados.'
+                    description='Aplicativo desktop para adição automática de coordenadas geográficas em fotos.'
                     link='/portfolio/geo-photos/#case-anchor'
                 />
+                <ProjectCard 
+                    image={constru}
+                    alt='Homepage da Constru'
+                    category='Desenvolvimento de Site'
+                    title='Constru'
+                    description='Site institucional da empresa júnior Constru, especializada em construção civil.'
+                    link='/portfolio/constru/#case-anchor'
+                />                
+
+
 
             </div>
         </section>

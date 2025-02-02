@@ -14,6 +14,7 @@ import Members from 'pags/Members.js';
 import Uberground from 'pags/Uberground';
 import JusConsultoria from 'pags/JusConsultoria'
 import GeoPhotos from 'pags/GeoPhotos'
+import Constru from 'pags/Constru'
 import MembrosCarousel from 'components/MembersCarousel/MembersCarousel';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/portfolio/uberground" element={<Uberground />} />
         <Route path="/portfolio/jus-consultoria" element={<JusConsultoria />} />
         <Route path="/portfolio/geo-photos" element={<GeoPhotos/>} />
+        <Route path="/portfolio/constru" element={<Constru/>} />
       </Routes>
       <Footer />
     </Router>
