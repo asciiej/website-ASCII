@@ -6,6 +6,7 @@ import OurServices from 'components/OurServices/OurServices.js';
 import Mvv from 'components/Mvv/Mvv.js';
 import Contact from 'components/Contact/Contact.js';
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
+import ASCIIPlay from 'components/ASCIIPlay';
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <PortfolioSection />
       <Mvv />
       <Logos />
+      <ASCIIPlay />
       <Contact />
     </>
   );

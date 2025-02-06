@@ -1,0 +1,68 @@
+.exploreIntroductionContainer,.exploreIntroductionSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exploreIntroductionSection{
+    height: 30vh;
+    width: 100%;
+    padding: 0;
+}
+
+.exploreIntroductionContainer{
+    flex-wrap: nowrap;
+    width: 80%;
+    height: 80%;
+}
+
+.exploreIntroductionContainer h1{
+    font-size: 2rem;
+    width: 400px;
+    text-align: center;
+    color: #000;
+    font-family: "Montserrat Alternates", serif;
+}
+
+.exploreIntroductionContainer p{
+    font-size: 1.2rem;
+    width: 60%;
+    text-align: center;
+    font-family: "Montserrat Alternates", serif;
+}
+
+@media screen and (max-width: 1100px){
+    .exploreIntroductionContainer p{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .exploreIntroductionContainer{
+        width: 100%;
+    }    
+
+    .exploreIntroductionContainer p{
+        font-size: 1.1rem;
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .exploreIntroductionSection{
+        height: 40vh;
+    }
+    
+    .exploreIntroductionContainer h1{
+        font-size: 1.5rem;
+        width: 300px;
+    }
+
+    .exploreIntroductionContainer p{
+        font-size: 1.1rem;
+        width: 90%;
+        height: 100%;
+    }
+}
