@@ -20,7 +20,8 @@ export default function CardPlay({ type, src, title, text, appearance, audio, ti
     return (
         <div className={styles.mediaItemAsciiPlay + " " + (appearance ? styles.transparent : "")}>
             <img className={type ? styles.none : styles.imgAsciiPlay} src={src} />
-            <div className={type ? styles.videoAsciiPlay : styles.none} style={{ backgroundColor: "black" }}>
+            <div className={type ? styles.videoAsciiPlay : styles.none} >
+                <video autoPlay src={src}></video>
             </div>
             <div className={styles.titleItemAsciiPlay}>
                 <p className={type ? styles.videoTitle : styles.podcastTitle}>{type ? "Vídeo" : "Podcast"}</p>

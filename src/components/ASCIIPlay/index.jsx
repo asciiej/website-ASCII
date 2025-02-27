@@ -3,6 +3,7 @@ import styles from "./index.module.css";
 import CardPlay from "./../CardPlay";
 import img1 from "./../../image/uberground-2.jpg";
 import audio from "./../../audio/Gravando.mp3";
+import video from "./../../video/gato.mp4";
 
 export default function ASCIIPlay() {
     const scrollerRef = useRef(null);
@@ -26,23 +27,15 @@ export default function ASCIIPlay() {
             id: 3,
             type: 1,
             title: "Vídeo 2",
-            src: "https://via.placeholder.com/150",
+            src: video,
             text: "Descrição do Vídeo 2",
             Transparent: false,
             time: 11,
         },
         {
-            id: 4,
-            Transparent: false,
-        },
-        {
-            id: 5,
-            Transparent: false,
-        },
-        {
-            id: 6,
+            id: 1,
             Transparent: true,
-        },
+        }
     ]);
 
     const scrollByAmount = (amount) => {

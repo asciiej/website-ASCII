@@ -1,0 +1,51 @@
+.asciiPlayPageSection{
+    height: 130vh;
+    width: 100%;
+    padding: 0;
+}
+
+.asciiPlayPageTextWrapper{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.asciiPlayPageTitle{
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #061380;
+}
+
+.asciiPlayGridContainer{
+    height: 80%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+@media screen and (max-width: 1000px){
+    .asciiPlayPageSection{
+        height: auto;
+    }
+
+    .asciiPlayGridContainer{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px){
+    .asciiPlayGridContainer{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        width: 60%;
+    }
+}
