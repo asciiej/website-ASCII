@@ -1,5 +1,6 @@
 import styles from 'components/portfolio/Projects.module.css'
 import { Link } from 'react-router-dom';
+import chevronIcon from 'image/chevron-right.svg';
 
 import img1 from '../../../image/geo1.png';
 import img2 from '../../../image/geo2.png';
@@ -47,7 +48,7 @@ Essa solução combinou tecnologias modernas e de alta performance para entregar
                 <div className={styles.galleryTitle}>
 
                     <h2>Galeria do Projeto</h2>
-
+                    <h2><a href="https://construej.com.br/" target="_blank">Acesse o repositório <img src={chevronIcon}></img></a></h2>
                 </div>
 
                 <div className={styles.gallery}>

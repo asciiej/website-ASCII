@@ -46,7 +46,7 @@ export default function CaseConstru() {
                 </div>
                 <div className={styles.galleryTitle}>
                     <h2>Galeria do Projeto</h2>
-                    <a href="https://construej.com.br/" target="_blank">Acesse o site <img src={chevronIcon}></img></a>
+                    <h2><a href="https://construej.com.br/" target="_blank">Acesse o site <img src={chevronIcon}></img></a></h2>
                 </div>
                 <div className={styles.gallery}>
                     <img className={styles.galleryItem} src={img1} alt="Homepage Constru"></img>
