@@ -48,7 +48,7 @@ Essa solução combinou tecnologias modernas e de alta performance para entregar
                 <div className={styles.galleryTitle}>
 
                     <h2>Galeria do Projeto</h2>
-                    <h2><a href="https://construej.com.br/" target="_blank">Acesse o repositório <img src={chevronIcon}></img></a></h2>
+                    <h2><a href="https://github.com/asciiej/Geophotos" target="_blank">Acesse o repositório <img src={chevronIcon}></img></a></h2>
                 </div>
 
                 <div className={styles.gallery}>
