@@ -7,6 +7,7 @@ import Mvv from 'components/Mvv/Mvv.js';
 import Contact from 'components/Contact/Contact.js';
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
 import AsciiPlayPage from "./../components/ASCIIPlay";
+import DepoimentosSlider from 'components/Avaliações/DepoimentosSlider.js';
 
 function Home() {
   return (
@@ -19,7 +20,10 @@ function Home() {
       <Mvv />
       <Logos />
       <AsciiPlayPage/>
+      <DepoimentosSlider />
       <Contact />
+      <Logos />
+
     </>
   );
 }

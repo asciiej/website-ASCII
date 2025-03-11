@@ -1,6 +1,6 @@
 .footer {
   box-sizing: border-box;
-  background: linear-gradient(144deg, rgba(6,19,128,1) 0%, rgba(4,10,61,1) 97%);
+  background: linear-gradient(90deg, rgba(4, 10, 61, 1) 0%, rgba(6, 19, 128, 1) 100%);
   transition: all 1s;
   padding: 0 12%;
   margin-top: 60px;
@@ -8,36 +8,6 @@
   position: relative;
 
   h3 {
-      color: var(--green);
-      text-shadow: 0px 2px 3px black;
-      font-weight: 600;
-      font-size: 1.1rem;
-  }
-
-  li {
-      margin: 1rem 0;
-  }
-
-  a {
-      color: var(--green-hover);
-      text-decoration: none;
-      transition: all 0.2s;
-  }
-
-  a:hover {
-      color: white;
-  }
-
-  p {
-      margin: 0;
-  }
-}
-
-.footer__wrapper {
-  box-sizing: border-box;
-  background-position: center;
-  background-repeat: space;
-  background-size: 65%;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -63,7 +33,7 @@
 }
 
 .copyright {
-  color: white;
+  color: var(--green);
   text-align: center;
   margin-top: 20px;
   position: relative;
@@ -79,14 +49,6 @@
 }
 
 @media screen and (max-width: 800px) {
-  .footer {
-      padding: 5% 12%;
-  }
-
-  .footer__wrapper {
-      display: block;
-      text-align: center;
-  }
 
   .logo {
       display: none;
