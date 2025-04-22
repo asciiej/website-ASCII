@@ -1,0 +1,79 @@
+.container {
+    padding-top: 90px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.metaInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.separator {
+    font-weight: bold;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: left;
+    color: #000;
+    line-height: 1.4;
+}
+
+
+.title strong {
+    display: block;
+    font-weight: 800;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+
+.imageWrapper {
+    width: 100%;
+    margin: 24px 0 8px 0;
+}
+
+.imagem {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.conteudo p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.subtitulo {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 32px 0 16px;
+}

@@ -4,6 +4,8 @@ import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
 import Ebooks from "../components/Ebooks/Ebooks";
 import TitleBanner from 'components/TitleBanner/TitleBanner.js';
 import ButtonWhatsapp from 'components/ButtonWhatsapp/ButtonWhatsapp.js';
+import Noticias from "components/Noticias/Noticias.js";
+
 
 function Explore() {
 
@@ -12,12 +14,13 @@ function Explore() {
     }, []);
 
     return (
-        <>  
-            <BurguerMenu theme='light'/>
-            <Header theme='dark'/>
-            <ButtonWhatsapp/>
-            <TitleBanner title='Explore+' image=''/>
-            <Ebooks/>
+        <>
+            <BurguerMenu theme='light' />
+            <Header theme='dark' />
+            <ButtonWhatsapp />
+            <TitleBanner title='Explore+' image='' />
+            <Ebooks />
+            <Noticias />
         </>
     );
 }
