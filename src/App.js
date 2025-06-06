@@ -19,6 +19,7 @@ import MembrosCarousel from 'components/MembersCarousel/MembersCarousel';
 import Explore from "pags/Explore";
 import Bibliotecaebooks from "pags/Bibliotecaebooks";
 import Asciiplay from 'pags/Asciiplay';
+import Innovare from 'pags/Innovare';
 
 
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/portfolio/jus-consultoria" element={<JusConsultoria />} />
         <Route path="/portfolio/geo-photos" element={<GeoPhotos/>} />
         <Route path="/portfolio/constru" element={<Constru/>} />
+        <Route path="/portfolio/innovare" element={<Innovare/>}/>
         <Route path="/explore" element={<Explore />} />
         <Route path="/Bibliotecaebooks" element={<Bibliotecaebooks />} />
         <Route path="/Asciiplay" element={<Asciiplay />} />

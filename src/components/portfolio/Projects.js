@@ -17,6 +17,7 @@ import jus from 'image/Jus.png'
 import uberground from 'image/uberground.png'
 import geophotos from 'image/geo1.png';
 import constru from 'image/constru1.png';
+import innovare1 from 'image/innovare1.png';
 
 export default function Projects() {
     return (
@@ -56,7 +57,15 @@ export default function Projects() {
                     title='Constru'
                     description='Site institucional da empresa júnior Constru, especializada em construção civil.'
                     link='/portfolio/constru/#case-anchor'
-                />        
+                />
+                <ProjectCard 
+                    image={innovare1}
+                    alt='Homepage da Innovare'
+                    category='Desenvolvimento de Site'
+                    title='Innovare'
+                    description='Página institucional da Innovare, que atua como empresa júnior na área de Psicologia Organizacional e consultoria especializada.'
+                    link='/portfolio/innovare/#case-anchor'
+                />       
 
             </div>
         </section>
