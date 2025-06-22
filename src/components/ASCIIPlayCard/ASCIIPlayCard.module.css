@@ -65,12 +65,22 @@
 .title {
   font-size: 1.25rem;
   font-weight: 300;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;             
+  -webkit-line-clamp: 3; 
 }
 
 .summary {
   font-size: 1rem;
   color: #297FDB;
   margin: 0.1rem 0 0.5rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;             
+  -webkit-line-clamp: 3; 
 }
 
 .footer {

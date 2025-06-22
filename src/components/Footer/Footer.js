@@ -11,7 +11,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__divider-wrapper">
-        <CustomShapeDivider />
+        <CustomShapeDivider/>
       </div>
       <div className="footer__wrapper" style={{ backgroundImage: `url(${Background})` }}>
         <div className='footer__container'>

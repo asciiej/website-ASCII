@@ -35,11 +35,10 @@
 
 .footer__divider-wrapper {
   position: absolute;
-  top: -56px;
+  top: 30px;
   left: 0;
   width: 100%;
   z-index: 0;
-  background: linear-gradient(90deg, rgba(4, 10, 61, 1) 0%, rgba(6, 19, 128, 1) 100%);
 }
 
 
