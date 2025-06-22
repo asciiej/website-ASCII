@@ -29,7 +29,7 @@ const CustomShapeDivider = ({
           position: "relative",
           display: "block",
           width: "100%",
-          height: "57px",
+          height: "60px",
         }}
       >
         <defs>
