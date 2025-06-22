@@ -17,6 +17,7 @@ import Constru from 'pags/Constru';
 import Explore from 'pags/Explore';
 import Bibliotecaebooks from 'pags/Bibliotecaebooks';
 import Asciiplay from 'pags/Asciiplay';
+import Innovare from 'pags/Innovare';
 
 import Noticias from './components/Noticias/Noticias';
 import ExplorarNoticias from './pags/ExploreNoticias';
@@ -33,8 +34,9 @@ function App() {
         <Route path="/membros" element={<Members />} />
         <Route path="/portfolio/uberground" element={<Uberground />} />
         <Route path="/portfolio/jus-consultoria" element={<JusConsultoria />} />
-        <Route path="/portfolio/geo-photos" element={<GeoPhotos />} />
-        <Route path="/portfolio/constru" element={<Constru />} />
+        <Route path="/portfolio/geo-photos" element={<GeoPhotos/>} />
+        <Route path="/portfolio/constru" element={<Constru/>} />
+        <Route path="/portfolio/innovare" element={<Innovare/>}/>
         <Route path="/explore" element={<Explore />} />
         <Route path="/Bibliotecaebooks" element={<Bibliotecaebooks />} />
         <Route path="/explore/noticias" element={<ExplorarNoticias />} />
