@@ -5,8 +5,8 @@ export const asciiplayCards = [
     {
       type: "VÍDEO",
       date: "OUT 25",
-      title: "HVM Runtime: Inovação Brasileira em Multiparalelismo teste teste teste",
-      summary: "Kauan e Lucas exploram o compilador HVM e seu impacto na FACOM Tech Week.teste teste teste",
+      title: "HVM Runtime: Inovação Brasileira em Multiparalelismo",
+      summary: "Kauan e Lucas exploram o compilador HVM e seu impacto na FACOM Tech Week.",
       youtubeId: "Colocar link vídeo youtube facom",
       imageSrc: bannerTechweek,
     },
