@@ -5,6 +5,7 @@ import Ebooks from "../components/Ebooks/Ebooks";
 import TitleBanner from 'components/TitleBanner/TitleBanner.js';
 import ButtonWhatsapp from 'components/ButtonWhatsapp/ButtonWhatsapp.js';
 import ASCIIPlayCarousel from 'components/ASCIIPlayCarousel/ASCIIPlayCarousel';
+import Noticias from "components/Noticias/Noticias.js";
 
 
 function Explore() {
@@ -19,6 +20,7 @@ function Explore() {
             <Header theme='dark'/>
             <ButtonWhatsapp/>
             <TitleBanner title='Explore+' image=''/>
+            <Noticias/>
             <div
             style={{
                 background: `linear-gradient(
