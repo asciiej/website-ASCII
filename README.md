@@ -1,70 +1,182 @@
-# Getting Started with Create React App
+# Website ASCII
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O site institucional da ASCII Empresa Júnior foi desenvolvido com o objetivo de divulgar a marca, os serviços e os valores da empresa, promovendo uma comunicação clara com possíveis clientes, parceiros e o público geral.
 
-## Available Scripts
+## 🗺️ Fluxograma de Navegação
 
-In the project directory, you can run:
+```mermaid
+flowchart TD
+    A["🏠 Home"] --> B["👥 Quem Somos"] & C["📁 Portfólio"] & D["📨 Contato"] & E["🔎 Explore+"] & X["📄 Carta de Serviços"] & W["💬 WhatsApp (botão fixo)"] & n2["🧪 Experimento"]
+    B --> T["👤 Equipe"]
+    T --> U["🔗 Lista Completa + LinkedIn"]
+    C --> R["🧩 Cards de Projetos"]
+    R --> S["🔍 Detalhes do Projeto"]
+    D --> Q["📬 Formulário (EmailJS)"]
+    E --> F["📰 Notícias"] & G["📚 E-books"] & H["🎧 Vídeos/Podcasts (Swiper)"]
+    F --> K["📄 Página de Cards"]
+    K --> L["📃 Página Individual"]
+    G --> M["📘 Página com E-books"]
+    M --> N["⬇️ Download"]
+    H --> O["🎥 Página com Mídias"]
+    O --> P["▶️ Modal Player"]
+    X --> n1["⬇️ Download"]
+    n2 --> n3["🚧 Em breve"]
+```
 
-### `npm start`
+## 🚀 Páginas do Site
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Home:** visão geral da empresa, serviços, missão/visão/valores, avaliações, formulário de contato.  
+- **Quem Somos:** lideranças, equipe, redes sociais, nossa história.  
+- **Portfólio:** projetos realizados.  
+- **Explore+:** hub de conteúdos como notícias, e-books e vídeos/podcasts.  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tecnologias Utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🔧 Build  
+Create React App
 
-### `npm run build`
+### 📚 Bibliotecas e Dependências  
+- EmailJS  
+- Swiper  
+- React Modal  
+- React Router  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 💻 Linguagens e Frameworks  
+- React.js  
+- JavaScript (ES6+)  
+- CSS Modules  
+- CSS3  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🎨 Design e Prototipagem  
+- Figma  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Dependências e Versões Necessárias
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Node.js** - Versão: 22.11.0
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ✅ Como rodar o projeto 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Siga os passos abaixo para executar a aplicação em seu ambiente local:
 
-## Learn More
+### Pré-requisitos  
+Antes de começar, verifique se você possui instalado em sua máquina:  
+- Node.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Passo a passo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone o repositório  
+   ```bash
+   git clone https://github.com/asciiej/website-ASCII.git
+   ```
 
-### Code Splitting
+2. Acesse a pasta do projeto  
+   ```bash
+   cd [CAMINHO_DA_PASTA_DO_PROJETO]
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Instale as dependências  
+   ```bash
+   npm install
+   ```
 
-### Analyzing the Bundle Size
+4. Inicie a aplicação  
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Após executar o comando seu navegador padrão deve abrir automaticamente na página ‘http://localhost:3000’
 
-### Making a Progressive Web App
+---
+## ℹ️ Informações importantes sobre a aplicação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Aprenda como inserir informações no sistema e manter os dados atualizados.
 
-### Advanced Configuration
+## ➤ Seção Explore+
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+A seção Explore+ do site possui três categorias de conteúdo:  
+📚 E-books | 📰 Notícias | 🎙 Vídeos/Podcasts  
+Todos os conteúdos são carregados dinamicamente a partir de arquivos JavaScript localizados na pasta `src/data`.
 
-### Deployment
+### 🧩 Onde editar?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| Tipo de conteúdo | Caminho do arquivo           |
+|------------------|-----------------------------|
+| E-books          | `src/data/ebooksData.js`    |
+| Notícias         | `src/data/noticiasData.js`  |
+| Vídeos/Podcasts  | `src/data/asciiplayCards.js`|
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ✍️ Como adicionar um novo item?
+
+Cada arquivo contém uma lista (array) de objetos com as informações a serem exibidas. Para adicionar um novo conteúdo, copie um item existente, cole logo abaixo e edite com o novo conteúdo.
+
+---
+
+### 📚 E-books
+
+- **id:** número único e sequencial.  
+- **title:** título com no máximo 2 linhas. O que passar disso não será mostrado.  
+- **description:** descrição com até 4 linhas. O que passar disso não será mostrado.  
+- **image:** imagem obrigatória, importada no topo do arquivo, com tamanho padrão 1024x1536.  
+- **file:** deve estar em `public/downloads/` e informado como `/downloads/ebook-nome.pdf` para download.  
+
+---
+
+### 📰 Notícias
+
+- **id:** número único e sequencial.  
+- **title:** até 3 linhas. O que passar disso não será mostrado.  
+- **description:** deve ser exatamente "ASCII Explore+".  
+- **image:** imagem importada no topo do arquivo.  
+- **fullText:** texto completo da notícia.  
+
+📌 Evite blocos grandes de texto sem espaçamento — use `\n` para separar parágrafos.
+
+📌 Para mudar a notícia principal, edite a linha:  
+```js
+const destaque = noticiasData[0];
+```
+no arquivo `components/noticias/Noticias.jsx`.
+
+---
+
+### 🎙 Vídeos e Podcasts
+
+- **type:** escolha apenas "VÍDEO" ou "PODCAST".  
+- **date:** formato "MÊS abreviado DIA" (ex: JUN 20).  
+- **title:** até 3 linhas. O que passar disso não será mostrado.  
+- **summary:** até 3 linhas. O que passar disso não será mostrado.  
+- **youtubeId:** código que aparece após v= no link do YouTube.  
+- **imageSrc:** imagem de capa, importada no topo do arquivo, com tamanho padrão quadrado. 
+
+📌 Exemplo:  
+No link `https://www.youtube.com/watch?v=Rh2JTF85h40`, o `youtubeId` é `Rh2JTF85h40`.
+
+---
+
+### ✅ Boas práticas:
+
+- Sempre verifique se todos os campos estão preenchidos.  
+- Não repita ids já existentes.  
+- Mantenha o padrão visual das imagens (mesmo tamanho/dimensões).  
+- Priorize títulos objetivos e resumos curtos.
+
+---
+
+## ➤ Seção Portifólio
+
+Documentação em construção
+
+---
+
+## ⏭️ Próximos passos
+
+Vamos criar uma página de experimentos no site, com jogos, demonstrações de IA e outras interações. A ideia é oferecer um espaço experimental para os usuários explorarem novas tecnologias.
+
