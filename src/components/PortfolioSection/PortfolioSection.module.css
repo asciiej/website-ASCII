@@ -5,27 +5,37 @@
     justify-content: center;
     gap: 2rem;
     padding: 3rem 12%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
 
-    button {
-        border: none;
-        border-radius: 6px;
-        background-color: var(--green);
-        margin: 1rem auto;
-        display: block;
-        font-weight: 600;
-        font-size: 1.05rem;
-        padding: 1rem 2rem;
-    }
+.call_to_action.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    button:hover {
-        background-color: #2cc832; /* Cor ao passar o mouse */
-    }
-    
-    button:active {
-        background-color: #449648; /* Cor ao clicar no botão */
-        transform: translateY(2px); /* Adiciona um efeito de "pressionamento" */
-    }
+.call_to_action button {
+    border: none;
+    border-radius: 6px;
+    background-color: var(--green);
+    margin: 1rem auto;
+    display: block;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+}
 
+.call_to_action button:hover {
+    background-color: #2cc832;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.call_to_action button:active {
+    background-color: #449648;
+    transform: translateY(0);
 }
 
 span {
@@ -36,6 +46,11 @@ span {
     height: 20vw;
     max-height: 400px;
     width: auto;
+    transition: transform 0.3s ease;
+}
+
+.services_image:hover {
+    transform: scale(1.05);
 }
 
 .text{
@@ -45,16 +60,57 @@ span {
     font-weight: 800;
     font-size: 2.5em;
     margin: 0.5em 0;
+    animation: fadeInRight 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @media screen and (max-width: 800px) {
     .call_to_action {
         display: block;
+        width: 90vw;
+        padding: 2rem 5%;
+    }
 
-        img {
-            height: 30vw;
-            margin: 0 auto;
-            display: block;
-        }
+    .call_to_action img {
+        height: 40vw;
+        max-height: 250px;
+        margin: 0 auto 2rem auto;
+        display: block;
+    }
+
+    .text {
+        font-size: 1.8em;
+        line-height: 1.2;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text {
+        font-size: 1.5em;
+    }
+
+    .call_to_action {
+        padding: 1.5rem 5%;
     }
 }

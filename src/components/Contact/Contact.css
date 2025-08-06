@@ -4,6 +4,14 @@
     justify-content: center;
     align-items: center;
     padding: 12px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+.contact-container.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contact-container > h2 {
@@ -11,25 +19,24 @@
     font-size: 40px;
     margin-top: 30px;
     margin-bottom: 10px;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .contact-container > p {
     text-align: center;
     font-size: 24px;
+    animation: fadeInUp 1s ease-out;
 }
 
-/*Div maior*/
 .contact-content {
-
     max-width: 800px;
-    box-shadow: 0 4px 8.5px rgba(0, 0, 0, 0.25); /* Deslocamento X, Y, Desfoque e Cor */
+    box-shadow: 0 4px 8.5px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
     padding: 12px;
     display: flex;
     justify-content: space-around;
+    animation: slideInUp 1.2s ease-out;
 }
-
-/*Informações de contato */
 
 .contact-info-container {
     padding: 30px;
@@ -38,16 +45,16 @@
     color: white;
     background: linear-gradient(180deg, #061380 24%, #040A3D 100%);
     position: relative;
-    z-index: 1; /* Mantém o texto acima do fundo */
+    z-index: 1;
     overflow: hidden;
 }
 
 .contact-info-container::before {
     content: "";
     position: absolute;
-    bottom: -100px; /* Ajuste para alinhar os pontos */
+    bottom: -100px;
     right: -70px;
-    width: 350px; /* Ajuste conforme necessário */
+    width: 350px;
     height: 350px;
     background: url('/src/image/mapa-fundo.svg') no-repeat center;
     background-size: cover;
@@ -68,6 +75,11 @@
 
 .contact-info-container img {
     width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.contact-info-container img:hover {
+    transform: scale(1.1);
 }
 
 .contact-details {
@@ -79,20 +91,29 @@
     align-items: center;
     gap: 15px;
     margin: 30px 0;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
 }
 
 .contact-item > a {
     color: white;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.contact-item > a:hover {
+    color: var(--green);
 }
 
 .email > a{
     display: flex;
-
-    color: inherit; /* Mantém a cor original */
-    text-decoration: none; /* Remove sublinhado, se necessário */
-    outline: none; /* Remove contorno azul/padrão */
+    color: inherit;
+    text-decoration: none;
+    outline: none;
     color: white !important;
 }
 
@@ -102,19 +123,24 @@
     gap: 10px;
 }
 
-
 a:active, a:focus, a:visited {
-    color: inherit; /* Mantém a cor original */
-    text-decoration: none; /* Remove sublinhado, se necessário */
-    outline: none; /* Remove contorno azul/padrão */
-  }
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
 
 .social-media-container {
     display: flex;
     gap: 15px;
 }
 
-/*Fomulário*/
+.social-media-container img {
+    transition: transform 0.3s ease;
+}
+
+.social-media-container img:hover {
+    transform: scale(1.2);
+}
 
 .contact-form {
     padding: 30px;
@@ -125,55 +151,51 @@ a:active, a:focus, a:visited {
     flex-direction: column;
 }
 
-/* Container label + input*/
 .input-container {
     display: flex;
-    flex-direction: column-reverse; /* Inverte a ordem para o label ficar acima */
+    flex-direction: column-reverse;
 }
 
-/*Configuração texto label*/
 label {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     margin-top: 30px;
     color: #8D8D8D;
+    transition: all 0.3s ease;
 }
-
-/*Configuração linha input*/
 
 textarea {
     width: 100%;
     margin: 5px 0;
     font-size: 12px;
-    resize: none; /* Impede que o usuário redimensione manualmente */
-    overflow-y: hidden; /* Remove a barra de rolagem até ser necessário */
+    resize: none;
+    overflow-y: hidden;
     font-family: 'Montserrat', sans-serif;
-  }
+}
 
 input, textarea {
     border: none;
     border-bottom: 2px solid #8D8D8D;
     padding: 8px 0;
+    transition: all 0.3s ease;
 }
 
 input:focus, textarea:focus {
     outline: none;
-    border-bottom: 2px solid var(--blue-dark); /* Muda a cor da borda ao focar */
+    border-bottom: 2px solid var(--blue-dark);
 }
 
 input.filled, textarea.filled {
     border-bottom: 2px solid var(--blue-dark);
-  }
+}
 
-/*Muda a cor do label quando estiver em for preenchido*/
 .input-container input:focus ~ .label,
 .input-container textarea:focus ~ .label,
 .label.active {
-      color: var(--blue-dark);
-      font-weight: 600;
-  }
-
-/*Assunto*/
+    color: var(--blue-dark);
+    font-weight: 600;
+    transform: translateY(-2px);
+}
 
 .radio-container p {
     font-weight: 600;
@@ -182,6 +204,7 @@ input.filled, textarea.filled {
 
 .radio-label {
     margin: 0;
+    transition: all 0.3s ease;
 }
 
 .radio-group  {
@@ -202,12 +225,10 @@ input.filled, textarea.filled {
     font-weight: 500;
 }
 
-/* Oculta o radio padrão */
 .radio-label input {
     display: none;
 }
 
-/* Criando a bolinha externa */
 .custom-radio {
     width: 8px;
     height: 8px;
@@ -216,10 +237,9 @@ input.filled, textarea.filled {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: border-color 0.3s;
+    transition: all 0.3s ease;
 }
 
-/* Adiciona a bolinha interna quando selecionado */
 .radio-label input:checked + .custom-radio::before {
     content: "";
     width: 5px;
@@ -228,7 +248,6 @@ input.filled, textarea.filled {
     border-radius: 50%;
 }
 
-/* Muda a borda da bolinha quando selecionado */
 .radio-label input:checked + .custom-radio {
     border-color: var(--blue-dark);
 }
@@ -248,6 +267,14 @@ input.filled, textarea.filled {
     padding: 1em 1.3em;
     width: 200px;
     margin: 15px 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--blue-light);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .nomeEmail {
@@ -261,21 +288,86 @@ input.filled, textarea.filled {
     margin-top: 10px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
+    .contact-container {
+        padding: 8px;
+    }
+
+    .contact-container > h2 {
+        font-size: 32px;
+    }
+
+    .contact-container > p {
+        font-size: 18px;
+        padding: 0 20px;
+    }
 
     .nomeEmail {
         display: flex;
         flex-direction: column;
+        gap: 10px;
     }
 
     .radio-group {
         flex-wrap: wrap;
+        gap: 10px;
     }
 
     .contact-content {
         flex-direction: column;
-        align-self: stretch; 
+        align-self: stretch;
+        margin: 0 10px;
+        max-width: calc(100vw - 20px);
+    }
+
+    .contact-info-container {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .container-button {
+        justify-content: center;
     }
 }

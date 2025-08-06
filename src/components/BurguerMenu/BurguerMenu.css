@@ -7,6 +7,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    animation: fadeInDown 0.8s ease-out;
 }
 
 .icon {
@@ -15,6 +16,11 @@
     left: 1%;
     margin: 1rem;
     z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
 }
 
 .menuHamburguer .list {
@@ -33,10 +39,20 @@
     font-size: 1.3rem;
     margin: 1.5rem; 
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
 
-    a {
-        color: white;
-    }
+.list .listItems li:hover {
+    transform: translateX(10px);
+}
+
+.list .listItems li a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.list .listItems li a:hover {
+    color: var(--green);
 }
 
 .icon {
@@ -47,7 +63,6 @@
     border-radius: 3px;
     background-repeat: no-repeat;
 }
-
 
 .icon.iconActive {
     width: 2rem;
@@ -61,11 +76,32 @@
 
 .menu.menuOpen {
     width: 100vw;
-    box-shadow: 10px -2px black
+    box-shadow: 10px -2px black;
+    animation: slideInRight 0.4s ease-out;
 }
 
 .menu.menuClose {
     display: none;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 @media screen and (min-width: 890px) {
