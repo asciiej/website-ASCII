@@ -35,6 +35,22 @@ function Logos(){
                 <img className={styles.images} src={innovare} alt="Logo_innovare"/>
                 <img className={styles.images} src={constru} alt="Logo_constru"/>
                 <img className={styles.images} src={ecap} alt="Logo_ecap"/>
+                {/* Duplicar logos para efeito infinito */}
+                <img className={styles.images} src={consulpsi} alt="Logo_consulpsi"/>   
+                <img className={styles.images} src={algar} alt="Logo_algar"/>
+                <img className={styles.images} src={Nucleo_triangulo} alt="Logo_nucleo"/>
+                <img className={styles.images} src={uberhub} alt="Logo_uberhub"/>
+                <img className={styles.images} src={bugware} alt="Logo_bugware"/>
+                <img className={styles.images} src={ufu} alt="Logo_ufu"/>
+                <img className={styles.images} src={mti} alt="Logo_mti"/>
+                <img className={styles.images} src={magna} alt="Logo_magna"/>
+                <img className={styles.images} src={fejemg} alt="Logo_fejemg"/>
+                <img className={styles.images} src={motim} alt="Logo_motim"/>
+                <img className={styles.images} src={wattworks} alt="Logo_wattworks"/>
+                <img className={styles.images} src={facom} alt="Logo_facom"/>
+                <img className={styles.images} src={innovare} alt="Logo_innovare"/>
+                <img className={styles.images} src={constru} alt="Logo_constru"/>
+                <img className={styles.images} src={ecap} alt="Logo_ecap"/>
             </div>
         </section>
     )

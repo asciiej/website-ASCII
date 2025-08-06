@@ -12,7 +12,6 @@ import linkedinIcon from 'image/linkedin.png';
 import githubIcon from 'image/github.png';
 
 export default function Contact() {
-
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -21,6 +20,25 @@ export default function Contact() {
     const [isFocused, setIsFocused] = useState(false);
     const [confirmationMessage, setConfirmationMessage] = useState('');
     const textareaRef = useRef(null);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
 
     function sendEmail(e) {
         e.preventDefault();
@@ -60,7 +78,7 @@ export default function Contact() {
     }, [message]);
 
     return (
-        <section className='contact-container' id="agendar-reuniao">
+        <section className='contact-container' id="agendar-reuniao" ref={sectionRef}>
             <h2>Agende uma reunião!</h2>
             <p>Saiba como nossa equipe pode ajudar a sua empresa!</p>
             
@@ -76,7 +94,7 @@ export default function Contact() {
                         </div>
                         <div className="contact-item">
                             <img src={emailIcon} alt="Email" />
-                            <div class="email">
+                            <div className="email">
                                 <a target="_blank" rel="noopener noreferrer" href="mailto:comercial@asciiej.com.br">comercial@asciiej.com.br</a>
                                 <a target="_blank" rel="noopener noreferrer" href="mailto:empresajunior@asciiej.com.br">empresajunior@asciiej.com.br</a>
                             </div>
@@ -96,7 +114,6 @@ export default function Contact() {
                 
                 <div className='contact-form'>
                     <form className="form" onSubmit={sendEmail}>
-
                         <div className="input-container">
                             <input 
                                 className={name ? "filled" : ""}

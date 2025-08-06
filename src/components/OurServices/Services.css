@@ -3,10 +3,12 @@
     transition: all 1s;
     padding: 0;
     margin: 0;
+    animation: fadeIn 1s ease-out;
+}
 
-    h2 {
-        color: white;
-    }
+.services h2 {
+    color: white;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .services-background {
@@ -15,7 +17,6 @@
     background-size: 65%; 
     background-attachment: fixed;
     padding: 5% 0;
-    /* cover for mobile */
 }
 
 .services-list {
@@ -35,15 +36,26 @@
     height: 100%;
     opacity: 1;
     margin: 2em 3vw;
-    transition: scale ease-in;
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+    animation: slideInUp 0.8s ease-out forwards;
+}
 
-    h3 {
-        color: white;
-    }
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
 
-    p {
-        color: white;
-    }
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: white;
+}
+
+.service-card p {
+    color: white;
 }
 
 .service-button {
@@ -55,24 +67,25 @@
     gap: 1em;
     color: var(--green);
     font-weight: 700;
-    transition: color 0.2s;
+    transition: all 0.3s ease;
     background: none;
     border: none;
     margin-top: 1em 0;
-
-    input {
-        display: none;
-    }
-
-    .chevronIcon {
-        color: red;
-        transition: all 0.5s 0.1s;
-    }    
 }
+
+.service-button input {
+    display: none;
+}
+
+.service-button .chevronIcon {
+    color: red;
+    transition: all 0.5s 0.1s;
+}    
 
 .service-button:hover {
     cursor: pointer;
     color: var(--green-hover);
+    transform: translateX(5px);
 }
 
 .service-button:hover .chevronIcon {
@@ -82,18 +95,18 @@
 .service-details {
     transform: translateY(0);  
     opacity: 0;
-
-    img {
-        width: 100%;
-        border-radius: 5px;
-    }
-
-    p {
-        color: var(--silver);
-    }
 }
 
-hide {
+.service-details img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.service-details p {
+    color: var(--silver);
+}
+
+.hide {
     opacity: 0;
     transform: translateY(-5px);
 }
@@ -109,30 +122,31 @@ hide {
     width: 100%;
     gap: 1em;
     margin-bottom: 0.5em;
+}
     
-    .service-icon {
-        width: 40px;
-        height: 40px;
-    }
+.service-header .service-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
 }
 
 .service-active {
     width: 90%;
+}
 
-    .chevronIcon {
-        transform: rotate(90deg);
-    }
+.service-active .chevronIcon {
+    transform: rotate(90deg);
+}
 
-    .service-details {
-        margin-top: 1.5em;
-        transform: translateY(-5%);
-        animation: show 600ms 100ms forwards;
-    }
+.service-active .service-details {
+    margin-top: 1.5em;
+    transform: translateY(-5%);
+    animation: show 600ms 100ms forwards;
+}
 
-    li {
-        margin: 1em 0;
-        box-sizing: border-box;
-    }
+.service-active li {
+    margin: 1em 0;
+    box-sizing: border-box;
 }
 
 .emphasis {
@@ -166,10 +180,44 @@ hide {
     margin-top: 30px;
     cursor: pointer;
     color: var(--blue-deep);
+    transition: all 0.3s ease;
 }
 
 .pdf-button:hover {
     background-color: var(--green-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes show {
@@ -177,7 +225,7 @@ hide {
       opacity: 1;
       transform: none;
     }
-  }
+}
 
 @media screen and (max-width: 900px) {
     h2 {
@@ -191,15 +239,12 @@ hide {
 }
 
 @media screen and (min-width: 800px) {
-    .service-active {
-        h3 {
-            font-size: 22px;
-        }
-    
-        .service-icon {
-            width: 50px;
-            height: 50px;
-        }
+    .service-active h3 {
+        font-size: 22px;
+    }
+
+    .service-active .service-icon {
+        width: 50px;
+        height: 50px;
     }
 }
-

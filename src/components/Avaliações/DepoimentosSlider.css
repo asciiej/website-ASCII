@@ -6,11 +6,13 @@
   background: var(--blue-deep);
   text-align: center;
   padding: 90px;
+  animation: fadeIn 1s ease-out;
 }
 
 .cabecalho-depoimentos {
   margin-bottom: 30px;
   font-family: 'Montserrat Alternates', sans-serif;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .cabecalho-depoimentos > h2 {
@@ -37,7 +39,12 @@
   flex-direction: column;
   height: auto;
   justify-content: end;
-  position: relative; /* Permite que elementos filhos sejam posicionados corretamente */
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card-depoimento:hover {
+  transform: translateY(-5px);
 }
 
 .conteudo-depoimento {
@@ -59,7 +66,6 @@
   font-size: 14px;
   color: #ffffff;
   position: relative;
-  
 }
 
 .aspas {
@@ -77,12 +83,12 @@
 .rodape-depoimento {
   background: white;
   color: var(--blue-deep);
-  padding: 70px 15px 30px; /* Ajuste para acomodar o avatar */
+  padding: 70px 15px 30px;
   border-radius: 0 0 6px 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; /* Para ficar abaixo do avatar */
+  position: relative;
   z-index: 1;
 }
 
@@ -93,7 +99,6 @@
   text-transform: uppercase;
 }
 
-/*Define a cor de fundo do circulo da imagem*/
 .avatar-1 {
   background: #102e5c;
 }
@@ -104,11 +109,16 @@
   background: lightgray;
   border-radius: 50%;
   overflow: hidden;
-  position: absolute; /* Agora ele fica sobreposto */
-  top: -35px; /* Metade para fora do rodapé */
+  position: absolute;
+  top: -35px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2; /* Mantém acima das outras divs */
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.avatar-depoimento:hover {
+  transform: translateX(-50%) scale(1.1);
 }
 
 .avatar-depoimento img {
@@ -117,7 +127,6 @@
   object-fit: cover;
 }
 
-/* Botões de navegação */
 .swiper-button-prev,
 .swiper-button-next {
   background: rgba(255, 255, 255, 0.8);
@@ -125,14 +134,21 @@
   height: 60px;
   border-radius: 50%;
   color: var(--blue-deep);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
 }
 
 .swiper-button-prev {
-  left: 1%; /* Ajuste a posição para fora do container */
+  left: 1%;
 }
 
 .swiper-button-next {
-  right: 1%; /* Ajuste a posição para fora do container */
+  right: 1%;
 }
 
 .swiper-button-prev::after,
@@ -141,10 +157,9 @@
   font-weight: bold;
 }
 
-/*Botão*/
 .whatsapp-button {
-  background-color: var(--green); /* Verde semelhante ao do botão */
-  color: #0a0a3d; /* Cor do texto */
+  background-color: var(--green);
+  color: #0a0a3d;
   font-weight: bold;
   border: none;
   padding: 15px;
@@ -154,13 +169,35 @@
   text-decoration: none;
   display: inline-block;
   margin-top: 48px;
+  transition: all 0.3s ease;
 }
 
 .whatsapp-button:hover {
   background-color: #5bb74d;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Media Queries para Responsividade */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 1024px) {
   .slider-depoimentos {
     margin: 0 3%;
@@ -201,11 +238,11 @@
   }
 
   .swiper-button-prev {
-    left: -1%; /* Ajuste a posição para fora do container */
+    left: -1%;
   }
   
   .swiper-button-next {
-    right: -1%; /* Ajuste a posição para fora do container */
+    right: -1%;
   }
 
   .swiper-button-prev::after,
@@ -215,7 +252,6 @@
 }
 
 @media (max-width: 768px) {
-
   .cabecalho-depoimentos > h2 {
     font-size: 24px;
   }
@@ -256,7 +292,6 @@
 }
 
 @media (max-width: 480px) {
-
   .container-depoimentos {
     padding: 40px;
   }
@@ -282,6 +317,4 @@
   .swiper-button-prev {
     left: -5%; 
   }
-
-  
 }
