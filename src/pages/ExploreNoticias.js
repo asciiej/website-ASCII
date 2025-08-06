@@ -5,7 +5,7 @@ import styles from './../components/Noticias/Noticias.module.css';
 
 import Header from "../components/Header/Header.js";
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
-import TitleBanner from 'components/TitleBanner/TitleBanner.js';
+import TitleBanner from 'components/About/TitleBanner/TitleBanner.js';
 import ButtonWhatsapp from 'components/ButtonWhatsapp/ButtonWhatsapp.js';
 
 function ExploreNoticias() {

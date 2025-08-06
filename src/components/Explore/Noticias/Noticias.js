@@ -2,8 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Noticias.module.css';
-import CustomShapeDivider from './../CustomShapeDivider';
-import noticiasData from '../../data/noticiasData';
+import CustomShapeDivider from '../../CustomShapeDivider';
+import noticiasData from '../../../data/noticiasData';
 
 function Noticias() {
   const destaque = noticiasData[0];

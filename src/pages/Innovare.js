@@ -1,21 +1,20 @@
 import Header from 'components/Header/Header.js'
-import TitleBanner from 'components/TitleBanner/TitleBanner.js';
+import TitleBanner from 'components/About/TitleBanner/TitleBanner.js';
 import Projects from 'components/portfolio/Projects.js';
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
+import CaseInnovare from 'components/portfolio/cases/CaseInnovare';
 import ButtonWhatsapp from 'components/ButtonWhatsapp/ButtonWhatsapp.js';
 
-function Portfolio() {
+function Innovare() {
   return (
     <>
       <div id="portfolio-anchor"></div>
       <BurguerMenu theme='light'/>
       <Header theme='dark'/>
       <ButtonWhatsapp/>
-      <TitleBanner title='Nosso Portfolio' image=''/>
-
-       <Projects/>
+      <CaseInnovare/>
     </>
   )
 }
 
-export default Portfolio;
+export default Innovare;

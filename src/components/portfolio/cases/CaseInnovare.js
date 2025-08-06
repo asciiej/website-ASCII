@@ -1,5 +1,5 @@
 import styles from 'components/portfolio/Projects.module.css'
-import FeedbackCard from 'components/FeedbackCard/FeedbackCard';
+import FeedbackCard from 'components/portfolio/FeedbackCard/FeedbackCard';
 import chevronIcon from 'image/chevron-right.svg';
 import { Link } from 'react-router-dom';
 
@@ -43,7 +43,7 @@ export default function CaseInnovare() {
                 </div>
                 <div className={styles.galleryTitle}>
                     <h2>Galeria do Projeto</h2>
-                    <a href="https://www.innovarejr.com.br/" target="_blank">Acesse o site <img src={chevronIcon}></img></a>
+                    <a href="https://www.innovarejr.com.br/" target="_blank" rel="noreferrer">Acesse o site <img src={chevronIcon}></img></a>
                 </div>
                 <div className={styles.gallery}>
                     <img className={styles.galleryItem} src={img1} alt="Homepage Innovare"></img>

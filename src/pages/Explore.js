@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import Header from "../components/Header/Header.js";
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
-import Ebooks from "../components/Ebooks/Ebooks";
-import TitleBanner from 'components/TitleBanner/TitleBanner.js';
+import Ebooks from "../components/Explore/Ebooks/Ebooks.js";
+import TitleBanner from 'components/About/TitleBanner/TitleBanner.js';
 import ButtonWhatsapp from 'components/ButtonWhatsapp/ButtonWhatsapp.js';
-import ASCIIPlayCarousel from 'components/ASCIIPlayCarousel/ASCIIPlayCarousel';
-import Noticias from "components/Noticias/Noticias.js";
+import ASCIIPlayCarousel from 'components/Explore/ASCIIPlayCarousel/ASCIIPlayCarousel.js';
+import Noticias from "components/Explore/Noticias/Noticias.js";
 
 
 function Explore() {

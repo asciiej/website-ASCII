@@ -1,5 +1,5 @@
 import styles from 'components/portfolio/Projects.module.css'
-import FeedbackCard from 'components/FeedbackCard/FeedbackCard';
+import FeedbackCard from 'components/portfolio/FeedbackCard/FeedbackCard';
 import chevronIcon from 'image/chevron-right.svg';
 import { Link } from 'react-router-dom';
 

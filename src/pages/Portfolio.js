@@ -1,20 +1,21 @@
 import Header from 'components/Header/Header.js'
-import TitleBanner from 'components/TitleBanner/TitleBanner.js';
+import TitleBanner from 'components/About/TitleBanner/TitleBanner.js';
 import Projects from 'components/portfolio/Projects.js';
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
-import CaseUberground from 'components/portfolio/cases/CaseUberground.js';
 import ButtonWhatsapp from 'components/ButtonWhatsapp/ButtonWhatsapp.js';
 
-function Ubeground() {
+function Portfolio() {
   return (
     <>
       <div id="portfolio-anchor"></div>
       <BurguerMenu theme='light'/>
       <Header theme='dark'/>
       <ButtonWhatsapp/>
-      <CaseUberground />
+      <TitleBanner title='Nosso Portfolio' image=''/>
+
+       <Projects/>
     </>
   )
 }
 
-export default Ubeground;
+export default Portfolio;

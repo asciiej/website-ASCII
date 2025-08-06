@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from 'components/EbooksLibrary/EbooksLibrary.module.css';
+import styles from 'components/Explore/Ebooks/Ebooks.module.css';
 import ebooksData from 'data/ebooksData';
 
 function EbooksLibrary() {

@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import Header from "../components/Header/Header.js";
 import BurguerMenu from "components/BurguerMenu/BurguerMenu.js";
-import TitleBanner from "components/TitleBanner/TitleBanner.js";
+import TitleBanner from "components/About/TitleBanner/TitleBanner.js";
 import ButtonWhatsapp from "components/ButtonWhatsapp/ButtonWhatsapp.js";
-import ASCIIPlayCard from "components/ASCIIPlayCard/ASCIIPlayCard.js";
+import ASCIIPlayCard from "components/Explore/ASCIIPlayCard/ASCIIPlayCard.js";
 import { asciiplayCards } from "data/asciiplayCards";
 
 function Asciiplay() {

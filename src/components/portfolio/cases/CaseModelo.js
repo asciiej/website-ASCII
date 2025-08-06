@@ -1,7 +1,7 @@
 // usar esse componente como modelo para futuros cases
 
 import styles from 'components/portfolio/ProjectCard.module.css'
-import FeedbackCard from 'components/FeedbackCard/FeedbackCard';
+import FeedbackCard from 'components/portfolio/FeedbackCard/FeedbackCard';
 import chevronIcon from 'image/chevron-right.svg';
 
 export default function CaseUberground() {
