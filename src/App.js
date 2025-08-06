@@ -4,24 +4,24 @@ import ScrollToAnchor from 'components/ScrollToAnchor/ScrollToAnchor';
 
 import './reset.css';
 
-import Home from 'pags/Home.js';
+import Home from 'pages/Home.js';
 import Footer from './components/Footer/Footer.js';
-import Portfolio from 'pags/Portfolio.js';
-import AboutUs from 'pags/AboutUs.js';
-import Members from 'pags/Members.js';
+import Portfolio from 'pages/Portfolio.js';
+import AboutUs from 'pages/AboutUs.js';
+import Members from 'pages/Members.js';
 
-import Uberground from 'pags/Uberground';
-import JusConsultoria from 'pags/JusConsultoria';
-import GeoPhotos from 'pags/GeoPhotos';
-import Constru from 'pags/Constru';
-import Explore from 'pags/Explore';
-import Bibliotecaebooks from 'pags/Bibliotecaebooks';
-import Asciiplay from 'pags/Asciiplay';
-import Innovare from 'pags/Innovare';
+import Uberground from 'pages/Uberground';
+import JusConsultoria from 'pages/JusConsultoria';
+import GeoPhotos from 'pages/GeoPhotos';
+import Constru from 'pages/Constru';
+import Explore from 'pages/Explore';
+import Bibliotecaebooks from 'pages/Bibliotecaebooks';
+import Asciiplay from 'pages/Asciiplay';
+import Innovare from 'pages/Innovare';
 
-import Noticias from './components/Noticias/Noticias';
-import ExplorarNoticias from './pags/ExploreNoticias';
-import NoticiaIndividual from './pags/NewsPage';
+import Noticias from './components/Explore/Noticias/Noticias';
+import ExplorarNoticias from './pages/ExploreNoticias';
+import NoticiaIndividual from './pages/NewsPage';
 
 function App() {
   return (

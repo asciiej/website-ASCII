@@ -5,7 +5,7 @@ import instagramLogo from "image/instagram-cor.png"
 import linkedinLogo from "image/linkedin-cor.png"
 import githubLogo from "image/github-cor.png"
 
-import MembersCarousel from 'components/MembersCarousel/MembersCarousel.js';
+import MembersCarousel from 'components/About/MembersCarousel/MembersCarousel.js';
 import {Link} from 'react-router-dom';
 
 import "./AboutUs.css"
@@ -61,17 +61,17 @@ export default function AboutUs() {
                 <div className="social-media__wrapper">
                     <div className="social-media__container">
                         <img src={linkedinLogo} alt="Linkedin"></img>
-                        <a target="_blank" href="https://www.linkedin.com/company/ascii-empresa-j%C3%BAnior/">ASCII Empresa Junior</a>
+                        <a target="_blank" href="https://www.linkedin.com/company/ascii-empresa-j%C3%BAnior/" rel="noreferrer">ASCII Empresa Junior</a>
                     </div>
 
                     <div className="social-media__container">
                         <img src={instagramLogo} alt="Instagram"></img>
-                        <a target="_blank" href="https://www.instagram.com/asciiempresajr/">@asciiempresajr</a>
+                        <a target="_blank" href="https://www.instagram.com/asciiempresajr/" rel="noreferrer">@asciiempresajr</a>
                     </div>
 
                     <div className="social-media__container">
                         <img src={githubLogo} alt="Github"></img>
-                        <a target="_blank" href="https://github.com/asciiej/website-ASCII">asciiej</a>
+                        <a target="_blank" href="https://github.com/asciiej/website-ASCII" rel="noreferrer">asciiej</a>
                     </div>
                 </div>
             </section>

@@ -5,7 +5,7 @@ import noticiasData from '../data/noticiasData';
 import styles from 'components/NewsPage/NewsPage.module.css'
 
 import Header from 'components/Header/Header.js'
-import TitleBanner from 'components/TitleBanner/TitleBanner.js';
+import TitleBanner from 'components/About/TitleBanner/TitleBanner.js';
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
 import ButtonWhatsapp from 'components/ButtonWhatsapp/ButtonWhatsapp.js';
 

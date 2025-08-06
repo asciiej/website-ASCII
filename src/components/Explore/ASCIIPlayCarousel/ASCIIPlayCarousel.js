@@ -9,7 +9,7 @@ import styles from "./ASCIIPlayCarousel.module.css";
 import { Link } from "react-router-dom";
 
 // Importa os dados da pasta src/data
-import { asciiplayCards } from "../../data/asciiplayCards";
+import { asciiplayCards } from "../../../data/asciiplayCards";
 
 const ASCIIPlayCarousel = () => {
   return (

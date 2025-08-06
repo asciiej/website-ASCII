@@ -1,7 +1,7 @@
 import Header from 'components/Header/Header.js'
-import TitleBanner from 'components/TitleBanner/TitleBanner.js';
+import TitleBanner from 'components/About/TitleBanner/TitleBanner.js';
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
-import MembersCarousel from 'components/MembersCarousel/MembersCarousel.js';
+import MembersCarousel from 'components/About/MembersCarousel/MembersCarousel.js';
 import ButtonWhatsapp from 'components/ButtonWhatsapp/ButtonWhatsapp.js';
 
 function Members() {
