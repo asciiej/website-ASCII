@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import noticiasData from '../data/noticiasData';
-import styles from './../components/Noticias/Noticias.module.css';
+import styles from './../components/Explore/Noticias/Noticias.module.css';
 
 import Header from "../components/Header/Header.js";
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';

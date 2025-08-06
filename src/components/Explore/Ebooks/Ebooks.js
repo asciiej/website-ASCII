@@ -1,6 +1,6 @@
 import React from 'react';
 import styles2 from 'components/Explore/Ebooks/Ebooks.module.css';
-import styles from 'components/EbooksLibrary/EbooksLibrary.module.css';
+import styles from 'components/Explore/Ebooks/EbooksLibrary/EbooksLibrary.module.css';
 import { Link } from 'react-router-dom';
 import ebooksData from 'data/ebooksData';
 
