@@ -3,6 +3,8 @@ import TitleBanner from 'components/About/TitleBanner/TitleBanner.js';
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
 import MembersCarousel from 'components/About/MembersCarousel/MembersCarousel.js';
 import ButtonWhatsapp from 'components/ButtonWhatsapp/ButtonWhatsapp.js';
+import { FaArrowLeft } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 function Members() {
   return (
@@ -12,7 +14,15 @@ function Members() {
       <BurguerMenu theme='light' />
       <Header theme='dark' />
       <ButtonWhatsapp/>
+
+
+
+
       <TitleBanner title='Nossa equipe' image='' />
+            <Link to="/sobre" className="back-to-about">
+        <FaArrowLeft />
+        Voltar para Quem Somos
+      </Link>
 
       <section className="membros">
         {/*

@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import missionIcon from "image/mission.svg"
 import visionIcon from "image/vision.svg"
 import valuesIcon from "image/values.svg"
@@ -11,41 +12,78 @@ import {Link} from 'react-router-dom';
 import "./AboutUs.css"
 
 export default function AboutUs() {
+    const sectionsRef = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '50px'
+        });
+
+        sectionsRef.current.forEach(section => {
+            if (section) observer.observe(section);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
+    const addToRefs = (el) => {
+        if (el && !sectionsRef.current.includes(el)) {
+            sectionsRef.current.push(el);
+        }
+    };
+
     return (
         <section className="about-us">
-            <h2>Quem Somos</h2>
-            <div className="about-us__text">
-                <p>Desenvolvemos serviços e projetos para empresas de diferentes portes, atendendo demandas na área de <span>tecnologia da informação</span> - como apps desktop/mobile, sites e softwares completos.</p>
-                <p>A ASCII Soluções em Tecnologia é uma instituição constituída e gerida exclusivamente por estudantes da computação da Universidade Federal de Uberlândia (UFU). Atuamos com front e back-end (design e experiencia do usuário, e funcionalidades da aplicação), ou seja, todo o escopo do projeto.</p>
+            <div className="about-us__intro fade-in" ref={addToRefs}>
+                <h2>Quem Somos</h2>
+                <div className="about-us__text">
+                    <p>Desenvolvemos serviços e projetos para empresas de diferentes portes, atendendo demandas na área de <span>tecnologia da informação</span> - como apps desktop/mobile, sites e softwares completos.</p>
+                    <p>A ASCII Soluções em Tecnologia é uma instituição constituída e gerida exclusivamente por estudantes da computação da Universidade Federal de Uberlândia (UFU). Atuamos com front e back-end (design e experiencia do usuário, e funcionalidades da aplicação), ou seja, todo o escopo do projeto.</p>
+                </div>
             </div>
-           
-            <h2>Nossas lideranças</h2>
-            <p>Nossa equipe é dividida em várias frentes, que contam com a liderança dos seguintes diretores:</p>
-            <MembersCarousel diretoria="diretor" />
-            <p className="highlight"> Contamos com um time dedicado e diverso, conheça mais sobre nossos membros: </p>
-            <Link to="/membros/#members-anchor"><button>Conheça toda a equipe</button></Link>
 
-            <section className="about-us__mvv">
+            <div className="about-us__leadership fade-in" ref={addToRefs}>
+                <h2>Nossas lideranças</h2>
+                <p>Nossa equipe é dividida em várias frentes, que contam com a liderança dos seguintes diretores:</p>
+                <MembersCarousel diretoria="diretor" />
+                <p className="highlight"> Contamos com um time dedicado e diverso, conheça mais sobre nossos membros: </p>
+                <Link to="/membros/#members-anchor"><button className="modern-button">Conheça toda a equipe</button></Link>
+            </div>
+
+            <section className="about-us__mvv fade-in" ref={addToRefs}>
                 <h2>Missão, Visão, Valores</h2>
                 <div className="mvv__container">
-                    <div className="mvv__card">
-                        <img src={missionIcon} alt=""></img>
-                        <div>
+                    <div className="mvv__card" ref={addToRefs}>
+                        <div className="mvv__icon">
+                            <img src={missionIcon} alt="Missão"/>
+                        </div>
+                        <div className="mvv__content">
                             <h3>Missão</h3>
                             <p>Capacitar e transformar talentos através da inovação tecnológica, oferecendo soluções criativas e eficazes para nossos clientes, enquanto promovemos o crescimento pessoal e profissional de nossos membros.</p>
                         </div>
                     </div>
-                    <div className="mvv__card">
-                        <img src={visionIcon} alt=""></img>
-                        <div>
+                    <div className="mvv__card" ref={addToRefs}>
+                        <div className="mvv__icon">
+                            <img src={visionIcon} alt="Visão"/>
+                        </div>
+                        <div className="mvv__content">
                             <h3>Visão</h3>
                             <p>Ser referência em excelência e inovação na área da tecnologia, formando líderes e especialistas comprometidos com o desenvolvimento sustentável e a transformação digital.</p>
                         </div>
                     </div>
                 </div>
-                <div className="mvv__card">
-                    <img src={valuesIcon} alt=""></img>
-                    <div>
+                <div className="mvv__card mvv__card--full" ref={addToRefs}>
+                    <div className="mvv__icon">
+                        <img src={valuesIcon} alt="Valores"/>
+                    </div>
+                    <div className="mvv__content">
                         <h3>Valores</h3>
                         <ul>
                             <li><span>Inovação:</span> Buscando novas ideias e soluções para superar desafios e gerar valor. </li>
@@ -56,21 +94,27 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section className="about-us__social-media">
+            <section className="about-us__social-media fade-in" ref={addToRefs}>
                 <h2>Nos siga nas redes!</h2>
                 <div className="social-media__wrapper">
                     <div className="social-media__container">
-                        <img src={linkedinLogo} alt="Linkedin"></img>
+                        <div className="social-media__icon">
+                            <img src={linkedinLogo} alt="Linkedin"/>
+                        </div>
                         <a target="_blank" href="https://www.linkedin.com/company/ascii-empresa-j%C3%BAnior/" rel="noreferrer">ASCII Empresa Junior</a>
                     </div>
 
                     <div className="social-media__container">
-                        <img src={instagramLogo} alt="Instagram"></img>
+                        <div className="social-media__icon">
+                            <img src={instagramLogo} alt="Instagram"/>
+                        </div>
                         <a target="_blank" href="https://www.instagram.com/asciiempresajr/" rel="noreferrer">@asciiempresajr</a>
                     </div>
 
                     <div className="social-media__container">
-                        <img src={githubLogo} alt="Github"></img>
+                        <div className="social-media__icon">
+                            <img src={githubLogo} alt="Github"/>
+                        </div>
                         <a target="_blank" href="https://github.com/asciiej/website-ASCII" rel="noreferrer">asciiej</a>
                     </div>
                 </div>

@@ -1,70 +1,293 @@
-.header {
-    text-align: center;
-    padding: 0 12%;
+
+.fadeIn {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header > h2 {
-    color: var(--blue-deep) !important;
+.fadeInVisible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .container {
     background: linear-gradient(
-        to bottom, 
-        #FFFFFF 0%,  /* Branco no topo */
-        #c6e1ff 38%, /* Azul claro */
-        #9fcdff 70%, /* Azul ainda mais claro */
-        #d4e9ff 90%, /* Azul ainda mais claro */
-        #FFFFFF 98%  /* Branco novamente no final */
+        180deg,
+        #ffffff 0%,
+        #f8fbff 20%,
+        #e8f4fd 40%,
+        #d4e9ff 60%,
+        #e8f4fd 80%,
+        #ffffff 100%
     );
-}
-
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    align-items: stretch;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-.gridItem {
-    background:var(--blue-deep);
-    border-radius: 12px;
-    box-shadow: var(--shadow);
+    padding: 5rem 0;
+    position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    justify-content: space-between;
 }
 
-.gridItem:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="%23e0e7ff" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.header h2 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--blue-deep);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--blue-deep), var(--blue-light));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    color: var(--blue-light);
+    font-weight: 500;
+    margin: 0;
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--blue-light), var(--green), var(--blue-light));
+    transform: translateX(-50%);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(6, 19, 128, 0.3);
+}
+
+.timelineItem {
+    position: relative;
+    margin: 4rem 0;
+    width: 100%;
+}
+
+.timelineItem:nth-child(odd) .timelineContent {
+    flex-direction: row;
+}
+
+.timelineItem:nth-child(even) .timelineContent {
+    flex-direction: row-reverse;
+}
+
+.timelineContent {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.yearBadge {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: linear-gradient(135deg, var(--blue-deep), var(--blue-light));
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(6, 19, 128, 0.3);
+    border: 6px solid white;
+}
+
+.year {
+    color: white;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cardContent {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: calc(50% - 50px);
+    position: relative;
+}
+
+.cardContent:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.cardContent:hover .imageContainer img {
+    transform: scale(1.1);
+}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(6, 19, 128, 0.1), rgba(52, 152, 219, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cardContent:hover .imageOverlay {
+    opacity: 1;
+}
+
+.textContent {
+    padding: 2rem;
 }
 
 .texto {
-    font-size: 0.8rem;
-    color: white;
-    line-height: 1.5;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+    text-align: justify;
 }
 
-.gridItem > img {
-    border-radius: 8px;
-    height: 150px;
-    width: 100%;
-    object-fit: cover;
-    margin-bottom: 20px;
+.connector {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: var(--green);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 5;
 }
 
-.ano {
-    color: white;
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timelineItem:nth-child(odd) .timelineContent,
+    .timelineItem:nth-child(even) .timelineContent {
+        flex-direction: row;
+        padding-left: 80px;
+    }
+
+    .yearBadge {
+        left: 30px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .year {
+        font-size: 1rem;
+    }
+
+    .cardContent {
+        width: 100%;
+    }
+
+    .connector {
+        left: 30px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .textContent {
+        padding: 1.5rem;
+    }
+
+    .imageContainer {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 3rem 0;
+    }
+
+    .timeline {
+        padding: 0 1rem;
+    }
+
+    .timelineItem {
+        margin: 3rem 0;
+    }
+
+    .timelineContent {
+        padding-left: 60px;
+    }
+
+    .yearBadge {
+        left: 20px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .year {
+        font-size: 0.9rem;
+    }
+
+    .connector {
+        left: 20px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .timeline::before {
+        left: 20px;
+        width: 3px;
+    }
+
+    .textContent {
+        padding: 1rem;
+    }
+
+    .texto {
+        font-size: 0.9rem;
+    }
+
+    .imageContainer {
+        height: 120px;
+    }
 }
