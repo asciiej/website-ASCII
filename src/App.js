@@ -15,6 +15,7 @@ import JusConsultoria from 'pages/JusConsultoria';
 import GeoPhotos from 'pages/GeoPhotos';
 import Constru from 'pages/Constru';
 import Explore from 'pages/Explore';
+import Experiment from 'pages/Experiment';
 import Bibliotecaebooks from 'pages/Bibliotecaebooks';
 import Asciiplay from 'pages/Asciiplay';
 import Innovare from 'pages/Innovare';
@@ -38,6 +39,7 @@ function App() {
         <Route path="/portfolio/constru" element={<Constru/>} />
         <Route path="/portfolio/innovare" element={<Innovare/>}/>
         <Route path="/explore" element={<Explore />} />
+        <Route path="/experiment" element={<Experiment />} />
         <Route path="/Bibliotecaebooks" element={<Bibliotecaebooks />} />
         <Route path="/explore/noticias" element={<ExplorarNoticias />} />
         <Route path="/noticias/:id" element={<NoticiaIndividual />} />

@@ -15,6 +15,7 @@ function Header(props) {
                     <li className='item'><Link to="/portfolio">Portfolio</Link></li>
                     <li className='item'><Link to="/#agendar-reuniao">Contato</Link></li>
                     <li className='item'><Link to="/Explore">Explore+</Link></li>
+                    <li className='item'><Link to="/experiment">Experimento</Link></li>
                 </ul>
             </div>
         </>
