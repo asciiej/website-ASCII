@@ -18,7 +18,7 @@ import ecap from 'image/ecap.jpg'
 function Logos(){
     return(
         <section className={styles.logos}>
-            <h2>Nossas parcerias</h2>
+            <h2>Nossos parceiros</h2>
             <div className={styles.logos_wrapper}>
                 <img className={styles.images} src={consulpsi} alt="Logo_consulpsi"/>   
                 <img className={styles.images} src={algar} alt="Logo_algar"/>
