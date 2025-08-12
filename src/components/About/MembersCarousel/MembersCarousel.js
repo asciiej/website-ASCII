@@ -1,82 +1,89 @@
-// Faixa dos direotres, com link para restante da equipe
+// MembersCarousel.js - VERSÃO FINAL COM ROLAGEM DINÂMICA
 import { useEffect, useState, useRef } from "react";
 
 import linkedinIcon from "image/linkedin.png";
 import navIcon from "image/carousel-nav.svg";
-import "./MembersCarousel.css"
+import "./MembersCarousel.css";
 
 export default function MembersCarousel(props) {
-    const [data, setData] = useState([{}]);
+    const [data, setData] = useState([]);
     const carousel = useRef(null);
-    const carouselItem = useRef(null);
 
-    const getData = () => {
-        fetch('/data/membros.json',
-            { headers: {
+    useEffect(() => {
+        fetch('/data/membros.json', {
+            headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
-            }}
-        )
-        .then((response) => 
-            response.json()
-        ).then((membersData) => {
-            console.log(membersData);
+            }
+        })
+        .then((response) => response.json())
+        .then((membersData) => {
             setData(membersData);
         });
-    }
+    }, []);
 
-    useEffect(() => {getData()}, [])
+    // --- LÓGICA DE ROLAGEM DINÂMICA ---
+    const handleNavClick = (direction) => {
+        const carouselEl = carousel.current;
+        if (!carouselEl) return;
 
-    const handleLeftClick = (event) => {
-        event.preventDefault();
-        carousel.current.scrollLeft -= (carousel.current.offsetWidth - (carouselItem.current.offsetWidth) );
-    }
+        const firstItem = carouselEl.querySelector('.carousel__item');
+        if (!firstItem) return;
 
-    const handleRightClick = (event) => {
-        event.preventDefault();
-        carousel.current.scrollLeft += (carousel.current.offsetWidth - (carouselItem.current.offsetWidth) );
-    }
+
+        const itemWidth = firstItem.offsetWidth;
+        const carouselStyle = window.getComputedStyle(carouselEl);
+        const gap = parseFloat(carouselStyle.gap) || 0;
+
+
+        const scrollAmount = itemWidth + gap;
+
+        carouselEl.scrollBy({
+            left: direction === 'left' ? -scrollAmount : scrollAmount,
+            behavior: 'smooth',
+        });
+    };
 
     return (
-        <>
         <div className="carousel__container">
-            <button onClick={handleLeftClick}
-                className='carousel__nav desktop left'><img src={navIcon} alt="Anterior"></img>
+            <button 
+                onClick={() => handleNavClick('left')}
+                className='carousel__nav left'
+            >
+                <img src={navIcon} alt="Anterior" />
             </button>
+            
             <div className="carousel" ref={carousel}>
-                {data.map((membro) => {
-                    const { nome, curso, cargo, diretoria, foto, linkedin } = membro;
-                    if (diretoria === props.diretoria) {
+                {data
+                    .filter(membro => membro.diretoria === props.diretoria)
+                    .map((membro) => {
+                        const { nome, curso, cargo, foto, linkedin } = membro;
                         return (
-                            <div className="carousel__item" key={nome} ref={carouselItem}>
+                            <div className="carousel__item" key={nome}>
                                 <div className="carousel__info">
                                     <h3 className="nome">{nome}</h3>
                                     <p className="cargo">{cargo}</p>
                                     <p className="curso">Graduando em {curso}</p>
                                     <div className="carousel__image">
                                         <div className="profile-button">
-                                            <a href={linkedin} target="_blank"><img src={linkedinIcon} alt="" /></a>
+                                            <a href={linkedin} target="_blank" rel="noopener noreferrer">
+                                                <img src={linkedinIcon} alt={`LinkedIn de ${nome}`} />
+                                            </a>
                                         </div>
-                                        <img className="foto" alt="" src={foto} />
+                                        <img className="foto" alt={`Foto de ${nome}`} src={foto} />
                                     </div>
                                 </div>
                             </div>
                         );
-                    }
-                })}
+                    })}
             </div>
-            <button onClick={handleRightClick} className='carousel__nav desktop right'>
-                <img src={navIcon} alt="Próximo"></img>
+
+            <button 
+                onClick={() => handleNavClick('right')}
+                className='carousel__nav right'
+            >
+                <img src={navIcon} alt="Próximo" />
             </button>
         </div>
-            <div className="carousel__nav mobile">
-                <button onClick={handleLeftClick}
-                    className='carousel__nav left'><img src={navIcon} alt="Anterior"></img>
-                </button>
-                <button onClick={handleRightClick} className='carousel__nav right'>
-                    <img src={navIcon} alt="Próximo"></img>
-                </button>
-            </div>
-        </>
-    )
+    );
 }
