@@ -55,6 +55,13 @@
     color: var(--green);
 }
 
+.list .listItems li.experiment-active a {
+    color: var(--green);
+    font-weight: 600;
+    border-bottom: 2px solid var(--green);
+    padding-bottom: 5px;
+}
+
 .icon {
     width: 2rem;
     height: 2rem;

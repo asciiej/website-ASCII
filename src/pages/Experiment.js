@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Header from "../components/Header/Header.js";
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
-import TitleBanner from 'components/About/TitleBanner/TitleBanner.js';
+import ExperimentBanner from 'components/Experimento/ExperimentBanner/ExperimentBanner.js';
 import ButtonWhatsapp from 'components/ButtonWhatsapp/ButtonWhatsapp.js';
 import ASCIIAbout from "components/Experimento/ASCIIAbout/ASCIIAbout.js";
 
@@ -15,7 +15,7 @@ function Experiment() {
             <BurguerMenu theme='light'/>
             <Header theme='dark'/>
             <ButtonWhatsapp/>
-            <TitleBanner title='Experimento' image=''/>
+            <ExperimentBanner title='Experimento' />
             <ASCIIAbout />
         </>
     );

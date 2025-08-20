@@ -4,6 +4,18 @@
     }
 }
 
+.experiment-header .experiment-active a {
+    color: var(--green) !important;
+    font-weight: 600;
+    border-bottom: 2px solid var(--green);
+    padding-bottom: 5px;
+}
+
+.experiment-header .experiment-active a:hover {
+    border-bottom: 2px solid var(--green);
+    color: var(--green-hover) !important;
+}
+
 .header {
     box-sizing: border-box;
     position: absolute;

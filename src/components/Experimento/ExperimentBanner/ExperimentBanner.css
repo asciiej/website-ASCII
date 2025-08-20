@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+.experiment-banner {
+    background-color: #000000;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+}
+
+.experiment-banner-background {
+    box-sizing: border-box;
+    height: 40vh;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.experiment-title {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-family: 'Orbitron', monospace;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 800px) {
+    .experiment-banner {
+        min-height: 30vh;
+    }
+    
+    .experiment-banner-background {
+        height: 30vh;
+        padding: 0 2rem;
+    }
+    
+    .experiment-title {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .experiment-title {
+        font-size: 28px;
+        letter-spacing: 0.05em;
+    }
+}
