@@ -12,6 +12,30 @@
     }
 }
 
+/* Estilos específicos para a página experimento */
+.experiment-banner {
+    background: black !important;
+
+    h1 {
+        color: white;
+        text-align: left;
+        margin: 0;
+        font-family: 'Orbitron', monospace;
+        font-weight: 400;
+        font-size: 54px;
+        font-style: normal;
+    }
+}
+
+.experiment-banner .title-banner-background {
+    background-image: none !important;
+}
+
+/* Garante que o wave-bottom não apareça na página experimento */
+.experiment-banner .wave-bottom {
+    display: none;
+}
+
 .title-banner-background {
     box-sizing: border-box;
     background-position: center;

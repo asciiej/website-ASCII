@@ -10,14 +10,14 @@ import WaveBottom from 'image/wave-bottom.svg';
 
 export default function TitleBanner(props) {
     return (
-        <section className='title-banner'>
+        <section className={`title-banner ${props.isExperiment ? 'experiment-banner' : ''}`}>
             <div className='title-banner-background' 
             style={{backgroundImage: `url(${Background})`}}
             >
                 <h1>{props.title}</h1>
                 <img id={props.id} src={props.image} alt="" className="banner-image"/>
             </div>
-            <img className='wave-bottom' src={WaveBottom}></img>
+            {!props.isExperiment && <img className='wave-bottom' src={WaveBottom}></img>}
         </section>
     );
 };

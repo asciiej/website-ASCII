@@ -4,6 +4,13 @@
     }
 }
 
+/* Estilo padrão para todos os links - azul escuro */
+.item a:hover{
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--blue-dark);
+}
+
+/* Estilos específicos para a página experimento */
 .experiment-header .experiment-active a {
     color: var(--green) !important;
     font-weight: 600;
@@ -13,7 +20,16 @@
 
 .experiment-header .experiment-active a:hover {
     border-bottom: 2px solid var(--green);
-    color: var(--green-hover) !important;
+    color: var(--green) !important;
+}
+
+/* Dropdown na página experimento mantém cor padrão */
+.experiment-header .dropdown-toggle {
+    color: white;
+}
+
+.experiment-header .dropdown-toggle:hover {
+    border-bottom: 2px solid white;
 }
 
 .header {
@@ -26,6 +42,8 @@
     padding: 3em 12%; 
     height: 12vw;
     width: 100vw;
+    z-index: 1000;
+    font-weight: bolder;
 }
 
 .list{
@@ -42,14 +60,123 @@
     margin-right: 3em;
 }
 
-
-.item a:hover{
-    padding-bottom: 5px;
-    border-bottom: 2px solid var(--blue-light);
-    /*font-size: 33px;*/
-    /*text-decoration: overline;*/
-    /*color: #6BB3F2;*/
+.item.dropdown {
+    font-weight: bold;
 }
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.5s;
+    margin-right: 3em;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 0;
+    color: var(--blue-dark);
+}
+
+.dark .dropdown-toggle {
+    color: white;
+}
+
+.dropdown-toggle:hover {
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--blue-dark);
+}
+
+.dark .dropdown-toggle:hover {
+    border-bottom: 2px solid white;
+}
+
+
+.dropdown-arrow {
+    width: 22px;
+    height: 22px;
+    background-image: url('../../image/arrow-down.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 8px 0;
+    min-width: 180px;
+    z-index: 1001;
+    list-style: none;
+    margin: 0;
+    color: var(--blue-dark);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0px 12px 12px;
+    color: var(--blue-dark)!important;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin: 0;
+    flex-grow: 1;
+    
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--green);
+    color: var(--blue-dark);
+    border-bottom: none;
+    padding-bottom: 12px;
+}
+
+.dropdown-icon {
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.news-icon {
+    background-image: url('../../image/news-icon.svg');
+}
+
+.ebook-icon {
+    background-image: url('../../image/ebook-icon.svg');
+}
+
+.play-icon {
+    background-image: url('../../image/play-icon.svg');
+}
+
 
 .logoheader{
     height: 50px;

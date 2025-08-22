@@ -8,18 +8,41 @@ import logoExperiment from 'image/logo_experiment.png'
 function Header(props) {
     const location = useLocation();
     const isExperimentPage = location.pathname === '/experiment';
-    const currentLogo = isExperimentPage ? logoExperiment : logo;
-    
     return (
         <>
             <div className={`${props.theme} header ${isExperimentPage ? 'experiment-header' : ''}`}>
-                <Link to="/"><img className='logoheader' src={currentLogo} alt="logo" id="logo-header"/></Link>
+                <Link to="/"><img className='logoheader' src={isExperimentPage ? logoExperiment : logo} alt="logo" id="logo-header"/></Link>
                 <ul className='list'>
                     <li className='item'><Link to="/">Home</Link></li>
                     <li className='item'><Link to="/sobre">Quem Somos</Link></li>
                     <li className='item'><Link to="/portfolio">Portfolio</Link></li>
                     <li className='item'><Link to="/#agendar-reuniao">Contato</Link></li>
-                    <li className='item'><Link to="/Explore">Explore+</Link></li>
+                    <li className='item dropdown'>
+                        <button className='dropdown-toggle'>
+                            Explore+
+                            <div className='dropdown-arrow'></div>
+                        </button>
+                        <ul className='dropdown-menu'>
+                            <li>
+                                <Link to="/noticias">
+                                    <div className='dropdown-icon news-icon'></div>
+                                    Notícias
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/ebooks">
+                                    <div className='dropdown-icon ebook-icon'></div>
+                                    E-books
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/podcasts">
+                                    <div className='dropdown-icon play-icon'></div>
+                                    Podcasts/Vídeos
+                                </Link>
+                            </li>
+                        </ul>
+                    </li>
                     <li className={`item ${isExperimentPage ? 'experiment-active' : ''}`}><Link to="/experiment">Experimento</Link></li>
                 </ul>
             </div>

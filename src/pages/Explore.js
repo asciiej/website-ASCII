@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Header from "../components/Header/Header.js";
-import Footer from "../components/Footer/Footer.js";
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
 import Ebooks from "../components/Explore/Ebooks/Ebooks.js";
 import TitleBanner from 'components/About/TitleBanner/TitleBanner.js';
@@ -35,7 +34,6 @@ function Explore() {
             <Ebooks />
             <ASCIIPlayCarousel />
             </div>
-            <Footer />
         </>
     );
 }
