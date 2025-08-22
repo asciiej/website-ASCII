@@ -1,15 +1,18 @@
 import React from 'react';
-import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import logo from 'image/logoHorizontal.png';
+import logoExperiment from 'image/logo_experiment.png';
 
 import './Footer.css';
 import Background from 'image/mapa-fundo.svg';
 import CustomShapeDivider from './../CustomShapeDivider';
 
 function Footer() {
+  const location = useLocation();
+  const isExperimentPage = location.pathname === '/experiment';
   return (
-    <footer className="footer">
+    <footer className={`footer ${isExperimentPage ? 'experiment-footer' : ''}`}>
       <div className="footer__divider-wrapper">
         <CustomShapeDivider/>
       </div>
@@ -24,9 +27,9 @@ function Footer() {
           </ul>
         </div>
 
-        <a href="#logo-header"><img src={logo} alt="" className="logo" /></a>
+        <a href="#logo-header"><img src={isExperimentPage ? logoExperiment : logo} alt="" className="logo" /></a>
         <div className='footer__container'>
-          <h3>Informações de Contato</h3>
+          <h3>Empresa</h3>
           <ul>
             <li><Link to="/portfolio/#portfolio-anchor">Portfolio</Link></li>
             <li><Link to="/sobre/#sobre-anchor">Quem Somos</Link></li>

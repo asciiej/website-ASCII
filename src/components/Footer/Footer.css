@@ -33,6 +33,37 @@
   }
 }
 
+/* Estilos específicos para o footer da página experimento */
+.experiment-footer {
+  background: black !important;
+  margin-top: 0;
+}
+
+.experiment-footer .footer__wrapper {
+  background-image: none !important;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(131, 227, 86, 0.2) 30%, rgba(131, 227, 86, 0.3) 50%, rgba(131, 227, 86, 0.2) 70%, rgba(0, 0, 0, 1) 100%);
+}
+
+.experiment-footer .footer__divider-wrapper {
+  display: none;
+}
+
+.experiment-footer h3 {
+  color: var(--green);
+}
+
+.experiment-footer a {
+  color: white;
+}
+
+.experiment-footer a:hover {
+  color: var(--green);
+}
+
+.experiment-footer .copyright {
+  color: var(--green);
+}
+
 .footer__divider-wrapper {
   position: absolute;
   top: 30px;
