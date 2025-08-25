@@ -64,6 +64,18 @@
   color: var(--green);
 }
 
+.logo {
+  height: 10vw;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Logo página experimento */
+.experiment-footer .logo {
+  height: 10vw !important;
+  width: auto !important;
+}
+
 .footer__divider-wrapper {
   position: absolute;
   top: 30px;
@@ -83,10 +95,6 @@
   overflow-y: hidden;
   position: relative;
   z-index: 1;
-}
-
-.logo {
-  height: 10vw;
 }
 
 .footer__social-media {
