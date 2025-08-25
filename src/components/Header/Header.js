@@ -24,21 +24,24 @@ function Header(props) {
                         </button>
                         <ul className='dropdown-menu'>
                             <li>
-                                <Link to="/noticias">
+                                <Link to="/explore/noticias">
                                     <div className='dropdown-icon news-icon'></div>
                                     Notícias
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/ebooks">
+                                <Link to="/Bibliotecaebooks">
                                     <div className='dropdown-icon ebook-icon'></div>
                                     E-books
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/podcasts">
+                                <Link to="/Asciiplay">
                                     <div className='dropdown-icon play-icon'></div>
-                                    Podcasts/Vídeos
+                                    <div className="dropdown-text">
+                                        <span>Podcasts</span>
+                                        <span>/Vídeos</span>
+                                    </div>
                                 </Link>
                             </li>
                         </ul>
